@@ -1,0 +1,24 @@
+ /* type="text/tailwindcss" */
+        @layer base {
+            body {
+                font-family: 'Roboto', sans-serif;
+                background: linear-gradient(135deg, #ffffff 0%, #f3faff 100%);
+            }
+            .section-title {
+                @apply text-3xl md:text-4xl font-bold text-center mb-4 relative pb-3;
+            }
+            .section-title::after {
+                @apply content-[''] absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-secondary rounded-full;
+            }
+            .card {
+                @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl;
+            }
+            .carousel-item {
+                @apply transition-all duration-500 ease-in-out;
+            }
+        }
+        @layer utilities {
+            .scroll-hidden::-webkit-scrollbar {
+                display: none;
+            }
+        }

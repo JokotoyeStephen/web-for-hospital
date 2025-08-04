@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HospitalCare</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./style/index.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body class="font-sans">
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-30 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+      <div class="text-xl font-bold">
+        <span class="text-gray-900">HospitalCare</span>
+      </div>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-6 text-gray-900 font-medium">
+        <a href="#home" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Home</a>
+
+        <div class="relative group inline-block ps-4 hover:text-blue-800">
+          <button class="py-1">
+            About Us
+            </buutton>
+
+            <!-- Dropdown content -->
+            <div class="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-md min-w-max">
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">About Us</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Our Mission & Value</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Our Team Members</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Our Technology</a>
+            </div>
+        </div>
+
+        <div class="relative group inline-block ps-4">
+          <button class="py-1">
+            Departments
+            </buutton>
+
+            <!-- Dropdown content -->
+            <div class="absolute hidden group-hover:block bg-white text-black mt-2 min-w-max shadow-md">
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Plastic Surgery</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Hamatology</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Neurology</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Gastrologic</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Orthopedic</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Pharmacology</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Dermatology</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Cardiology</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Pulmonology</a>
+            </div>
+        </div>
+
+        <a href="#doctors" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Doctors</a>
+        <a href="#appointment" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Appointment</a>
+        <a href="#contact" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Contact</a>
+        <a href="" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Patient & Victors</a>
+        <a href="#" class="ml-4 bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-300 hover:text-blue-800">Sign
+          In</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button id="menuBtn" class="md:hidden text-gray-800">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 bg-white text-gray-700">
+      <a href="#home" class="block py-2">Home</a>
+      <a href="#about" class="block py-2">About</a>
+      <a href="#departments" class="block py-2">Departments</a>
+      <a href="#doctors" class="block py-2">Doctors</a>
+      <a href="#appointment" class="block py-2">Appointment</a>
+      <a href="#contact" class="block py-2">Contact</a>
+        <a href="" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Patient & Victors</a>
+
+      <a href="#" class="block mt-2 bg-wine text-white px-4 py-2 rounded text-center hover:bg-blue-800 transition">Sign
+        In</a>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="relative h-screen bg-cover bg-center pt-16"
+    style="background-image: url('./image/logo_make_11_06_2023_250.jpg');">
+    <div class="absolute inset-0 bg-gray-950 bg-opacity-70"></div>
+    <div class="relative z-10 flex flex-col justify-center items-start h-full max-w-4xl mx-auto text-white pt-20">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Your Health, Our Priority</h2>
+      <p class="text-lg md:text-xl mb-4 max-w-xl">We offer advanced and compassionate medical care for every patient.
+        Trusted by thousands of families.</p>
+      <div class="flex gap-4">
+        <p><i class='bx bxs-check-shield'></i> 100% Expert Doctors</p>
+        <p><i class='bx bxs-check-shield'></i> Instant Appointment & Operation</p>
+      </div>
+      <div class="flex gap-4 mb-6">
+        <p><i class='bx bxs-check-shield'></i> From Scintific Jornal</p>
+        <p><i class='bx bxs-check-shield'></i> Medicine & Instrument</p>
+      </div>
+      <a href="#"
+        class="ml-4 bg-gray-950 text-white px-4 py-2 rounded hover:bg-gray-300 hover:text-blue-900 font-semibold transition">Book
+        Appointment</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-12 px-6">
+    <div class="flex mx-auto justify-center">
+      <div class="bg-gray-200 pt-8 p-10 pe-40">
+        <p class="text-blue-800 pt-16 text-xl font-bold">24 hours emergency <br> assistance call us</p>
+        <p class="text-3xl font-bold">1-800-123-4560</p>
+      </div>
+      <div class="bg-blue-800 p-10 font-bold">
+        <p class="text-5xl pt-6 text-center text-white"> <i class='bx bx-calendar'></i> </p>
+        <p class="text-3xl text-gray-100 pt-8">Request Appointment</p>
+      </div>
+      <div><img src="./image/local/img-02.webp" alt=""></div>
+    </div>
+    <div class="flex mx-auto justify-center">
+      <div><img src="./image/local/img-222.webp" alt=""></div>
+      <div class="bg-gray-950 p-6">
+        <p class="text-5xl text-center text-white"> &#129517 </p>
+        <h4 class="text-2xl text-white pt-6 font-bold">Our Location <br> Support</h4>
+        <p class="text-gray-100 hover:block">In clinic all locations <br> we commands to give patients <br>have suitable
+          care.</p>
+        <p class="text-gray-100 font-bold">32+ Doctors</p>
+      </div>
+      <div><img src="./image/img-03.jpg" alt=""></div>
+      <div class="bg-gray-200 p-10">
+        <p class="text-5xl text-center text-white"> &#128100 </p>
+        <h4 class="text-2xl text-gray-950 font-bold">Find The <br> Best Doctors </h4>
+        <p class="text-blue-950">Highly skilled medical <br> physician with 30 years of <br>experience in clinic.</p>
+      </div>
+    </div>
+  </section>
+  <section class="pt-12 bg-gray-200 flex gap-6 mx-auto justify-center">
+    <div>
+      <img src="./image/local/Doctor2.png" alt="" width="1500">
+    </div>
+    <div class="ps-20 pe-20">
+      <p class="text-2xl text-blue-800 pt-6 font-bold"> <i class='bx bxs-school'></i> Visit Our Clinics</p>
+      <h2 class="text-5xl text-gray-950 pt-4 font-bold leading-[3.2rem]">The great place of <br>medical hospital
+        <br><span class="text-blue-800">center.</span>
+      </h2>
+      <p class="pt-4 leading-[1.6rem]">At HospitalCare, our mission is to provide compassionate, high-quality healthcare
+        to our community. Founded in [Year], we have grown from a small clinic into a comprehensive medical center
+        offering a wide range of services, including [list key services].</p>
+      <p class="pt-2 leading-[1.6rem]">We are proud to be accredited by [Accrediting Body] and have received numerous
+        awards for excellence in patient care. Our dedicated team of [number] healthcare professionals is committed to
+        ensuring that every patient receives personalized and effective treatment.</p>
+      <div class="pt-4 font-bold">
+        <div class="flex gap-4">
+          <p class="text-blue-800 hover:text-gray-950"><i class='bx bxs-check-shield'></i> 100% Expert Doctors</p>
+          <p class="text-blue-800 hover:text-gray-950"><i class='bx bxs-check-shield'></i> Instant Appointment &
+            Operation</p>
+        </div>
+        <div class="flex gap-4 mb-6">
+          <p class="text-blue-800 hover:text-gray-950"><i class='bx bxs-check-shield'></i> From Scintific Jornal</p>
+          <p class="text-blue-800 hover:text-gray-950"><i class='bx bxs-check-shield'></i> Medicine & Instrument</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best practice care! -->
+  <section class="bg-gray-950 pt-24">
+    <p class="text-sky-400 text-xl font-bold text-center">Best practice care!</p>
+    <h2 class="text-4xl text-white pt-2 font-bold mb-4 text-center">Resposible Departments</h2>
+    <div class="min-h-screen py-12 px-4">
+      <div class="max-w-6xl mx-auto">
+        <!-- Carousel Container -->
+        <div class="relative">
+          <!-- Navigation Arrows -->
+          <button id="prevButton"
+            class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 rounded-full bg-gray-200 shadow-lg flex items-center justify-center text-gray-950 hover:text-sky-400 transition-all">
+            <
+          </button>
+
+          <button id="nextButton"
+            class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 rounded-full bg-gray-200 shadow-lg flex items-center justify-center text-gray-950 hover:text-sky-400 transition-all">
+            >
+          </button>
+
+          <!-- Carousel -->
+          <div class="overflow-hidden">
+            <div id="carousel1" class="flex transition-transform duration-500 ease-in-out scroll-hidden">
+              <!-- Card 1 -->
+              <div
+                class="carousel-item min-w-[calc(100%/1)] sm:min-w-[calc(100%/2)] md:min-w-[calc(100%/3)] lg:min-w-[calc(100%/4)] p-4">
+                <div class="card h-full bg-white">
+                  <img src="./image/di.webp" alt="" height="200px">
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 hover:text-sky-400">Cardiology</h3>
+                    <p class="text-gray-600 mb-4">Advanced heart care with state-of-the-art diagnostics and treatment
+                      options.</p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                      Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                class="carousel-item min-w-[calc(100%/1)] sm:min-w-[calc(100%/2)] md:min-w-[calc(100%/3)] lg:min-w-[calc(100%/4)] p-4">
+                <div class="card h-full bg-white">
+                  <img
+                    src="./image/female-surgeon-with-surgical-mask-operating-room-using-3d-image-guided-surgery-machine.jpg"
+                    alt="">
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 hover:text-sky-400">Neurology</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive care for disorders of the nervous system and brain.</p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                      Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div
+                class="carousel-item min-w-[calc(100%/1)] sm:min-w-[calc(100%/2)] md:min-w-[calc(100%/3)] lg:min-w-[calc(100%/4)] p-4">
+                <div class="card h-full bg-white">
+                  <img src="./image/ordinary-busy-day-surgeon.jpg" alt="">
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 hover:text-sky-400">Pediatrics</h3>
+                    <p class="text-gray-600 mb-4">Specialized care for infants, children, and adolescents.</p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                      Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div
+                class="carousel-item min-w-[calc(100%/1)] sm:min-w-[calc(100%/2)] md:min-w-[calc(100%/3)] lg:min-w-[calc(100%/4)] p-4">
+                <div class="card h-full bg-white">
+                  <img src="./image/doctor-operating-room-putting-drugs.jpg" alt="">
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 hover:text-sky-400">Orthopedics</h3>
+                    <p class="text-gray-600 mb-4">Treatment for musculoskeletal injuries and conditions.</p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                      Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 5 -->
+              <div
+                class="carousel-item min-w-[calc(100%/1)] sm:min-w-[calc(100%/2)] md:min-w-[calc(100%/3)] lg:min-w-[calc(100%/4)] p-4">
+                <div class="card h-full bg-white">
+                  <img src="./image/oxygen.webp" alt="" height="200px">
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Pulmonology</h3>
+                    <p class="text-gray-600 mb-4">Expert care for respiratory conditions and lung diseases.</p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                      Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 6 -->
+              <div
+                class="carousel-item min-w-[calc(100%/1)] sm:min-w-[calc(100%/2)] md:min-w-[calc(100%/3)] lg:min-w-[calc(100%/4)] p-4">
+                <div class="card h-full bg-white">
+                  <img src="./image/check.webp" alt="">
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Ophthalmology</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive eye care and vision correction services.</p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                      Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 7 -->
+              <div
+                class="carousel-item min-w-[calc(100%/1)] sm:min-w-[calc(100%/2)] md:min-w-[calc(100%/3)] lg:min-w-[calc(100%/4)] p-4">
+                <div class="card h-full bg-white">
+                  <img src="./image/operation.avif" alt="" height="200px">
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Dentistry</h3>
+                    <p class="text-gray-600 mb-4">Complete dental care for all ages with modern techniques.</p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                      Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 8 -->
+              <div
+                class="carousel-item min-w-[calc(100%/1)] sm:min-w-[calc(100%/2)] md:min-w-[calc(100%/3)] lg:min-w-[calc(100%/4)] p-4">
+                <div class="card h-full bg-white">
+                  <img src="./image/op.avif" alt="">
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 hover:text-gray-200">Genetics</h3>
+                    <p class="text-gray-600 mb-4">Genetic counseling and testing for inherited conditions.</p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                      Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Indicators -->
+          <div class="flex justify-center mt-8 space-x-2">
+            <button class="indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-primary transition-all"></button>
+            <button class="indicator w-3 h-3 rounded-full bg-gray-300 hover:bg-primary transition-all"></button>
+          </div>
+        </div>
+  </section>
+
+  <!-- sections -->
+  <section class="py-12 px-6 px-6">
+    <div class="flex justify-between gap-6">
+      <div class="ps-8">
+        <img src="./image/doctor-getting-patient.jpg" alt="" width="500">
+      </div>
+      <div>
+        <img src="./image/local/Dr-image-2.png" alt="" width="400">
+
+      </div>
+      <div class="pt-10 text-gray-950">
+        <h2 class="font-bold text-3xl">Few Thing Why You Always Choose <br> Us For the Treatment</h2>
+        <p class="text-lg font-medium pt-6">A cardiologist will do a physical exam and discuss your symptoms, medical
+          history and <br>family history with you. It’s important to let your cardiologist know if other people in
+          <br>your family have had heart problems
+        </p>
+        <div class="pt-6">
+          <h3 class="text-base font-medium">Manage Treatment</h3>
+
+        </div>
+        <div>
+          <h3 class="text-base font-medium">Rehabilitation</h3>
+        </div>
+        <div>
+          <h3 class="text-base font-medium">Production</h3>
+        </div>
+
+        <button>more Details</button>
+      </div>
+    </div>
+  </section>
+  <!-- Departments Section -->
+  <section id="departments" class="py-24 px-6 bg-white">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Our Departments</h2>
+      <p class="text-gray-700 mb-6">Explore departments like Cardiology, Pediatrics, Orthopedics, Surgery, and more.</p>
+    </div>
+  </section>
+
+
+
+  <!-- Services Section -->
+  <section class="py-16 px-6 bg-gray-200">
+    <h2 class="text-4xl font-bold text-center mb-10">We Offer a Wide Range of Unique Services</h2>
+    <p class="text-center mb-10">Journey to better health and wellbeing. Treatment for specific condition simply looking
+      to improve, and reflects the tone you want to convey to you.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+        <img src="https://via.placeholder.com/150" alt="Virtual Consultation" class="mx-auto mb-4">
+        <h3 class="text-xl font-bold">Virtual Consultation</h3>
+        <p>Virtual consultation services are increasingly popular in the health industry, especially given recent
+          technological.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+        <img src="https://via.placeholder.com/150" alt="Make Appointment" class="mx-auto mb-4">
+        <h3 class="text-xl font-bold">Make Appointment</h3>
+        <p>Whether you're seeking follow-up care or simply have questions about your health.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md text-center">
+        <img src="https://via.placeholder.com/150" alt="Online Pharmacy" class="mx-auto mb-4">
+        <h3 class="text-xl font-bold">Online Pharmacy</h3>
+        <p>Our comprehensive selection of medicine, supplements, and healthcare products is just a click away ensuring.
+        </p>
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <button class="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600">See More</button>
+    </div>
+  </section>
+  <!-- sdfghjkl -->
+
+
+  <!-- Doctors Section -->
+  <section id="doctors" class="py-24 px-6 bg-gray-200">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Meet Our Doctors</h2>
+      <p class="text-gray-700">Our team of specialists is here to provide quality care in every field of medicine.</p>
+    </div>
+  </section>
+
+  <!-- Appointment Section -->
+  <section id="appointment" class="py-24 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Book an Appointment</h2>
+      <p class="text-gray-700 mb-4">Schedule a consultation with one of our doctors today.</p>
+      <a href="#" class="bg-wine text-white px-5 py-3 rounded hover:bg-pink-800 transition">Start Booking</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="pt-12 bg-white">
+    <div class="ps-8">
+      <p class="text-sky-400 text-lg font-bold">Feature's Galley</p>
+      <h2 class="text-5xl pt-2 text-gray-950 font-bold mb-4">Latest Case Studies</h2>
+    </div>
+    <div class="flex pt-8">
+      <div><img src="./image/complete.webp" alt=""></div>
+      <div><img src="./image/medical.webp" alt=""></div>
+      <div><img src="./image/bar.webp" alt=""></div>
+      <div><img src="./image/modern.webp" alt=""></div>
+      <div><img src="./image/heart.webp" alt=""></div>
+    </div>
+  </section>
+
+  <section class="bg-gray-950 py-24">
+    <p class="text-sky-400 text-xl font-bold text-center">Medical quality care</p>
+    <h2 class="text-4xl text-white pt-2 font-bold mb-4 text-center">Exactly What Facilities We Provided</h2>
+    <div class="flex gap-10 mx-auto max-w-6xl mt-10">
+      <div class="flex gap-4">
+        <img src="" alt="">
+        <div>
+          <h3 class="text-white font-bold text-2xl">Standards of Treatment</h3>
+          <p class="text-gray-100 text-base">We provide standard treatment & best medical facility in clinic.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4">
+        <img src="" alt="">
+        <div>
+          <h3 class="text-white font-bold text-2xl">Infection Prevention</h3>
+          <p class="text-gray-100 text-base">We provide standard treatment & best medical facility in clinic.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4">
+        <img src="" alt="">
+        <div>
+          <h3 class="text-white font-bold text-2xl">Quality of Care Services</h3>
+          <p class="text-gray-100 text-base">We provide standard treatment & best medical facility in clinic.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex gap-10 mx-auto max-w-6xl mt-8 mb-14">
+      <div class="flex gap-4">
+        <img src="" alt="">
+        <div>
+          <h3 class="text-white font-bold text-2xl">Patient Experience</h3>
+          <p class="text-gray-100 text-base">We provide standard treatment & best medical facility in clinic.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4">
+        <img src="" alt="">
+        <div>
+          <h3 class="text-white font-bold text-2xl">Well Communication</h3>
+          <p class="text-gray-100 text-base">We provide standard treatment & best medical facility in clinic.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4">
+        <img src="" alt="">
+        <div>
+          <h3 class="text-white font-bold text-2xl">25+ Years Experience</h3>
+          <p class="text-gray-100 text-base">We provide standard treatment & best medical facility in clinic.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <section class="absolute bg-white max-w-5xl p-10 z-30 mt-1 left-36 mx-auto rounded-xl">
+      <div class="flex gap-10 transform-translate-y-1/2 transform-translate-x-1/2 w-full">
+        <div>
+          <h2 class="text-sky-400 font-bold text-5xl">3,669+</h2>
+          <h3 class="text-xl font-semibold text-gray-950">Happy Patient</h3>
+          <p class="mt-5 text-sm text-gray-950">Over the Surgery critical patients Surgery in the clinic</p>
+        </div>
+        <div>
+          <h2 class="text-sky-400 font-bold text-5xl">500+</h2>
+          <h3 class="text-xl font-semibold text-gray-950">Expert Doctor</h3>
+          <p class="mt-5 text-sm text-gray-950">The medical proffessional doctors avaliable in the clinic</p>
+        </div>
+        <div>
+          <h2 class="text-sky-400 font-bold text-5xl">50+</h2>
+          <h3 class="text-xl font-semibold text-gray-950">Health Departments</h3>
+          <p class="mt-5 text-sm text-gray-950">Total health departments avaliable in our medical clinic</p>
+        </div>
+        <div>
+          <h2 class="text-sky-400 font-bold text-5xl">1,250+</h2>
+          <h3 class="text-xl font-semibold text-gray-950">Total Branchess</h3>
+          <p class="mt-5 text-sm text-gray-950">Total medical branches avaliable all over the World.</p>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!--  -->
+
+  <section class="pt-52 bg-gray-200">
+    <p class="text-sky-400 text-xl font-bold text-center">Testimonial</p>
+    <h2 class="text-4xl text-gray-950 pt-2 font-bold mb-4 text-center"> Satisfied Patients Reviews</h2>
+
+
+
+    <section class="bg-gray-200">
+      <div class="max-w-2xl mx-auto text-center">
+
+        <div class="relative overflow-hidden">
+          <!-- Carousel Wrapper -->
+          <div id="carousel" class="flex transition-transform duration-700 ease-in-out">
+            <!-- Card 1 -->
+            <div class="min-w-full px-4">
+              <div class="bg-white shadow-lg rounded-xl">
+                <img src="./image/op.avif" alt="" height="300px">
+                <p class="text-gray-600 italic mb-4  p-6">"Thanks to the dedication of the medical team, my recovery was
+                  faster than I ever expected. They created a tailored treatment plan and checked on me regularly to
+                  ensure I was healing properly. I appreciated their constant encouragement and support, which gave me
+                  the confidence to stay positive throughout my recovery."</p>
+                <h4 class="font-semibold text-gray-950">- Sarah Johnson</h4>
+                <p class="text-sm text-sky-500 pb-4">Recovered Patient</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="min-w-full px-4">
+              <div class="bg-white shadow-lg rounded-xl">
+                <img src="./image/check.webp" alt="" height="300px">
+                <p class="text-gray-600 italic mb-4  p-6">"The hospital is not only staffed with exceptional
+                  professionals but also equipped with state-of-the-art facilities. From the clean, welcoming
+                  environment to the modern medical equipment, everything exceeded my expectations. I felt safe, cared
+                  for, and confident that I was receiving the highest quality healthcare."</p>
+                <h4 class="font-semibold text-gray-950">— James Anderson,</h4>
+                <p class="text-sm text-sky-500 p-6"> Patient’s Family Member</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="min-w-full px-4">
+              <div class="bg-white shadow-lg rounded-xl">
+                <img
+                  src="./image/african-american-man-woman-talking-girl-hospital-ward-about-healing-treatment-diagnosis-doctors-examining-sick-young-patient-with-cervical-neck-collar-sitting-bed.jpg"
+                  alt="" height="300px">
+                <p class="text-gray-600 italic mb-4  p-6">"What could have been a stressful hospital visit turned out to
+                  be completely stress-free, thanks to the hospital’s efficient processes. The reception staff were
+                  helpful, the doctors were incredibly thorough, and the nurses were always available to assist. I never
+                  felt rushed, and every step was explained clearly."</p>
+                <h4 class="font-semibold text-gray-950">— Laura Mitchell,</h4>
+                <p class="text-sm text-sky-500 p-6"> Outpatient Visitor</p>
+              </div>
+            </div>
+
+            <div class="min-w-full px-4">
+              <div class="bg-white shadow-lg rounded-xl ">
+                <img src="./image/oxygen.webp" alt="" height="300px">
+                <p class="text-gray-600 italic mb-4 p-6">"What stood out the most during my stay was how personalized
+                  the care felt. The doctors listened carefully to my concerns, and the nurses treated me like family.
+                  Every single member of staff was attentive, patient, and incredibly kind. I truly felt valued and
+                  respected, not just as a patient, but as a person."</p>
+                <h4 class="font-semibold text-gray-950">— Hannah Carter</h4>
+                <p class="text-sm text-sky-500 p-6">Outpatient Visitor</p>
+              </div>
+            </div>
+
+            <div class="min-w-full px-4">
+              <div class="bg-white shadow-lg rounded-xl">
+                <img src="./image/ordinary-busy-day-surgeon.jpg" alt="" height="300px">
+                <p class="text-gray-600 italic mb-4  p-6">"I will forever be thankful to this hospital for saving my
+                  life. After being admitted in critical condition, the medical team worked tirelessly and provided
+                  immediate, life-saving treatment. Their quick response, combined with advanced technology and expert
+                  knowledge, gave me a second chance at life. I can’t recommend this hospital enough!"</p>
+                <h4 class="font-semibold text-gray-950 p-6">-— Robert Taylor,</h4>
+                <p class="text-sm text-sky-500 p-6"> Recovered Patient</p>
+              </div>
+            </div>
+
+            <div class="min-w-full px-4">
+              <div class="bg-white shadow-lg rounded-xl">
+                <img src="./image/local/blog-3-image.jpg" alt="" height="300px">
+                <p class="text-gray-600 italic mb-4  p-6">"The dedication and skill of the hospital staff are unmatched.
+                  The doctors showed not only expertise but also empathy. They went above and beyond to ensure I
+                  received the best treatment. Their teamwork and genuine concern made me feel like I was more than just
+                  another patient."</p>
+                <h4 class="font-semibold text-gray-950">- Dr. Emily Brown</h4>
+                <p class="text-sm text-sky-500 p-6">Former Patient</p>
+              </div>
+            </div>
+
+            <div class="min-w-full px-4">
+              <div class="bg-white shadow-lg rounded-xl">
+                <img src="./image/local/blog-2-image.jpg" alt="" height="300px">
+                <p class="text-gray-600 italic mb-4  p-6">"What stood out the most during my stay was how personalized
+                  the care felt. The doctors listened carefully to my concerns, and the nurses treated me like family.
+                  Every single member of staff was attentive, patient, and incredibly kind. I truly felt valued and
+                  respected, not just as a patient, but as a person."</p>
+                <h4 class="font-semibold text-gray-950">— David Lee,</h4>
+                <p class="text-sm text-sky-500 p-6"> Surgery Patient</p>
+              </div>
+            </div>
+
+            <div class="min-w-full px-4">
+              <div class="bg-white shadow-lg rounded-xl">
+                <img src="./image/medical.webp" alt="" height="300px">
+                <p class="text-gray-600 italic mb-4  p-6">"Thanks to the dedication of the medical team, my recovery was
+                  faster than I ever expected. They created a tailored treatment plan and checked on me regularly to
+                  ensure I was healing properly. I appreciated their constant encouragement and support, which gave me
+                  the confidence to stay positive throughout my recovery."</p>
+                <h4 class="font-semibold text-gray-950">— Maria Gonzalez</h4>
+                <p class="text-sm text-sky-500 p-6"> Surgery Patientt</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation buttons -->
+          <button id="prev"
+            class="absolute top-1/2 left-2 -translate-y-1/2 bg-blue-500 text-gray-950 p-2 rounded-full shadow hover:bg-sky-400">
+            &#10094;
+          </button>
+          <button id="next"
+            class="absolute top-1/2 right-2 -translate-y-1/2 bg-blue-500 text-gray-950 p-2 rounded-full shadow hover:bg-sky-400">
+            &#10095;
+          </button>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  
+  <!-- Contact Section -->
+  <section class="pt-12 bg-white">
+    <div class="ps-8">
+      <p class="text-sky-400 text-lg font-bold">Keeping You Well.</p>
+      <h2 class="text-5xl pt-2 text-gray-950 font-bold mb-4">Stories, Tips & Latest News</h2>
+    </div>
+    <div class="flex pt-8">
+      <div><img src="./image/complete.webp" alt=""></div>
+      <div><img src="./image/medical.webp" alt=""></div>
+      <div><img src="./image/bar.webp" alt=""></div>
+      <div><img src="./image/modern.webp" alt=""></div>
+      <div><img src="./image/heart.webp" alt=""></div>
+    </div>
+  </section>
+
+  <script src="./script/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+
+</html>
