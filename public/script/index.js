@@ -1,3 +1,23 @@
+  function animateProgress(barId, percentId, target) {
+    let progress = 0;
+    const bar = document.getElementById(barId);
+    const percent = document.getElementById(percentId);
+
+    const interval = setInterval(() => {
+      if (progress >= target) {
+        clearInterval(interval);
+      } else {
+        progress++;
+        bar.style.width = progress + "%";
+        percent.textContent = progress + "%";
+      }
+    }, 20); // speed of animation
+  }
+
+  // Animate all bars
+  animateProgress("rehab-bar", "rehab-percent", 85);
+  animateProgress("prod-bar", "prod-percent", 80);
+  animateProgress("treat-bar", "treat-percent", 76);
 document.addEventListener('DOMContentLoaded', function () {
         const carousel = document.getElementById('carousel1');
         const items = document.querySelectorAll('.carousel-item');
