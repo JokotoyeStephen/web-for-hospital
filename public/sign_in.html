@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Patient or Doctor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gray-100 py-10">
+  <div class="bg-white shadow-lg rounded-2xl w-full max-w-md p-8">
+    <h2 class="text-3xl font-bold text-center mb-6">Login Account</h2>
+
+    <!-- Tabs -->
+    <div class="flex justify-center mb-8 space-x-4">
+      <button id="patientTab" class="px-5 py-2 rounded-full bg-blue-600 text-white font-medium">Patient</button>
+      <button id="doctorTab" class="px-5 py-2 rounded-full bg-gray-200 text-gray-700 font-medium">Doctor</button>
+    </div>
+
+    <!-- PATIENT LOGIN FORM -->
+    <form id="patientForm" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium">Email Address</label>
+        <input id="patientEmail" type="email" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300" placeholder="Enter your email" required>
+      </div>
+
+      <div class="relative">
+        <label class="block text-sm font-medium">Password</label>
+        <input id="patientPassword" type="password" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300" placeholder="Enter your password" required>
+        <i class="bx bx-hide absolute right-3 top-9 text-gray-500 text-xl cursor-pointer" onclick="togglePassword('patientPassword', this)"></i>
+      </div>
+
+      <p id="patientError" class="text-red-500 text-sm hidden">Please fill in all fields!</p>
+
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Login as Patient</button>
+
+      <p class="text-center text-sm mt-4">
+        Don’t have an account? 
+        <a href="register.html" class="text-blue-600 hover:underline">Register</a>
+      </p>
+    </form>
+
+    <!-- DOCTOR LOGIN FORM -->
+    <form id="doctorForm" class="space-y-4 hidden">
+      <div>
+        <label class="block text-sm font-medium">Email Address</label>
+        <input id="doctorEmail" type="email" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-green-300" placeholder="Enter your email" required>
+      </div>
+
+      <div class="relative">
+        <label class="block text-sm font-medium">Password</label>
+        <input id="doctorPassword" type="password" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-green-300" placeholder="Enter your password" required>
+        <i class="bx bx-hide absolute right-3 top-9 text-gray-500 text-xl cursor-pointer" onclick="togglePassword('doctorPassword', this)"></i>
+      </div>
+
+      <p id="doctorError" class="text-red-500 text-sm hidden">Please fill in all fields!</p>
+
+      <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">Login as Doctor</button>
+
+      <p class="text-center text-sm mt-4">
+        Don’t have an account? 
+        <a href="register.html" class="text-green-600 hover:underline">Register</a>
+      </p>
+    </form>
+  </div>
+
+  <script>
+    // Tabs
+    const patientTab = document.getElementById('patientTab');
+    const doctorTab = document.getElementById('doctorTab');
+    const patientForm = document.getElementById('patientForm');
+    const doctorForm = document.getElementById('doctorForm');
+
+    patientTab.addEventListener('click', () => {
+      patientTab.classList.add('bg-blue-600', 'text-white');
+      patientTab.classList.remove('bg-gray-200', 'text-gray-700');
+      doctorTab.classList.add('bg-gray-200', 'text-gray-700');
+      doctorTab.classList.remove('bg-green-600', 'text-white');
+      patientForm.classList.remove('hidden');
+      doctorForm.classList.add('hidden');
+    });
+
+    doctorTab.addEventListener('click', () => {
+      doctorTab.classList.add('bg-green-600', 'text-white');
+      doctorTab.classList.remove('bg-gray-200', 'text-gray-700');
+      patientTab.classList.add('bg-gray-200', 'text-gray-700');
+      patientTab.classList.remove('bg-blue-600', 'text-white');
+      doctorForm.classList.remove('hidden');
+      patientForm.classList.add('hidden');
+    });
+
+    // Show/Hide Password
+    function togglePassword(id, icon) {
+      const input = document.getElementById(id);
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('bx-hide');
+        icon.classList.add('bx-show');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('bx-show');
+        icon.classList.add('bx-hide');
+      }
+    }
+
+    // Validate Patient Login
+    patientForm.addEventListener('submit', (e) => {
+      const email = document.getElementById('patientEmail').value.trim();
+      const password = document.getElementById('patientPassword').value.trim();
+      const error = document.getElementById('patientError');
+      if (email === '' || password === '') {
+        e.preventDefault();
+        error.classList.remove('hidden');
+      } else {
+        error.classList.add('hidden');
+        alert("Patient login successful!");
+      }
+    });
+
+    // Validate Doctor Login
+    doctorForm.addEventListener('submit', (e) => {
+      const email = document.getElementById('doctorEmail').value.trim();
+      const password = document.getElementById('doctorPassword').value.trim();
+      const error = document.getElementById('doctorError');
+      if (email === '' || password === '') {
+        e.preventDefault();
+        error.classList.remove('hidden');
+      } else {
+        error.classList.add('hidden');
+        alert("Doctor login successful!");
+      }
+    });
+  </script>
+</body>
+</html>

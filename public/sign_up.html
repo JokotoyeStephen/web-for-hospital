@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Patient or Doctor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gray-100 py-10">
+  <div class="bg-white shadow-lg rounded-2xl w-full max-w-3xl p-8">
+    <h2 class="text-3xl font-bold text-center mb-6">Register Account</h2>
+
+    <!-- Tabs -->
+    <div class="flex justify-center mb-8 space-x-4">
+      <button id="patientTab" class="px-5 py-2 rounded-full bg-blue-600 text-white font-medium">Patient</button>
+      <button id="doctorTab" class="px-5 py-2 rounded-full bg-gray-200 text-gray-700 font-medium">Doctor</button>
+    </div>
+
+    <!-- PATIENT FORM -->
+    <form id="patientForm" class="space-y-4">
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium">Full Name</label>
+          <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300" placeholder="Enter full name" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Email Address</label>
+          <input type="email" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300" placeholder="Enter email" required>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium">Phone Number</label>
+          <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300" placeholder="Enter phone number" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Date of Birth</label>
+          <input type="date" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300" required>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium">Gender</label>
+          <select class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300" required>
+            <option value="">Select gender</option>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Blood Group</label>
+          <select class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300" required>
+            <option value="">Select blood group</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>O+</option>
+            <option>O-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium">Address</label>
+        <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300" placeholder="Enter address" required>
+      </div>
+
+      <div class="relative">
+        <label class="block text-sm font-medium">Password</label>
+        <input id="patientPassword" type="password" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300" placeholder="Enter password" required>
+        <i class="bx bx-hide absolute right-3 top-9 text-gray-500 text-xl cursor-pointer" onclick="togglePassword('patientPassword', this)"></i>
+      </div>
+
+      <div class="relative">
+        <label class="block text-sm font-medium">Confirm Password</label>
+        <input id="patientConfirmPassword" type="password" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300" placeholder="Confirm password" required>
+        <i class="bx bx-hide absolute right-3 top-9 text-gray-500 text-xl cursor-pointer" onclick="togglePassword('patientConfirmPassword', this)"></i>
+      </div>
+
+      <p id="patientError" class="text-red-500 text-sm hidden">Passwords do not match!</p>
+
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Register as Patient</button>
+    </form>
+
+    <!-- DOCTOR FORM -->
+    <form id="doctorForm" class="space-y-4 hidden">
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium">Full Name</label>
+          <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-green-300" placeholder="Enter full name" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Email Address</label>
+          <input type="email" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-green-300" placeholder="Enter email" required>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium">Phone Number</label>
+          <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-green-300" placeholder="Enter phone number" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Specialization</label>
+          <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-green-300" placeholder="e.g., Cardiologist" required>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium">Years of Experience</label>
+          <input type="number" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-green-300" placeholder="Enter years" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Hospital/Clinic Name</label>
+          <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-green-300" placeholder="Enter hospital/clinic" required>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium">Medical License Number</label>
+        <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-green-300" placeholder="Enter license number" required>
+      </div>
+
+      <div class="relative">
+        <label class="block text-sm font-medium">Password</label>
+        <input id="doctorPassword" type="password" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-green-300" placeholder="Enter password" required>
+        <i class="bx bx-hide absolute right-3 top-9 text-gray-500 text-xl cursor-pointer" onclick="togglePassword('doctorPassword', this)"></i>
+      </div>
+
+      <div class="relative">
+        <label class="block text-sm font-medium">Confirm Password</label>
+        <input id="doctorConfirmPassword" type="password" class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-green-300" placeholder="Confirm password" required>
+        <i class="bx bx-hide absolute right-3 top-9 text-gray-500 text-xl cursor-pointer" onclick="togglePassword('doctorConfirmPassword', this)"></i>
+      </div>
+
+      <p id="doctorError" class="text-red-500 text-sm hidden">Passwords do not match!</p>
+
+      <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">Register as Doctor</button>
+    </form>
+  </div>
+
+  <script>
+    const patientTab = document.getElementById('patientTab');
+    const doctorTab = document.getElementById('doctorTab');
+    const patientForm = document.getElementById('patientForm');
+    const doctorForm = document.getElementById('doctorForm');
+
+    // Tab switching
+    patientTab.addEventListener('click', () => {
+      patientTab.classList.add('bg-blue-600', 'text-white');
+      patientTab.classList.remove('bg-gray-200', 'text-gray-700');
+      doctorTab.classList.add('bg-gray-200', 'text-gray-700');
+      doctorTab.classList.remove('bg-green-600', 'text-white');
+      patientForm.classList.remove('hidden');
+      doctorForm.classList.add('hidden');
+    });
+
+    doctorTab.addEventListener('click', () => {
+      doctorTab.classList.add('bg-green-600', 'text-white');
+      doctorTab.classList.remove('bg-gray-200', 'text-gray-700');
+      patientTab.classList.add('bg-gray-200', 'text-gray-700');
+      patientTab.classList.remove('bg-blue-600', 'text-white');
+      doctorForm.classList.remove('hidden');
+      patientForm.classList.add('hidden');
+    });
+
+    // Toggle Password Visibility
+    function togglePassword(id, icon) {
+      const input = document.getElementById(id);
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('bx-hide');
+        icon.classList.add('bx-show');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('bx-show');
+        icon.classList.add('bx-hide');
+      }
+    }
+
+    // Check Password Match - Patient
+    patientForm.addEventListener('submit', (e) => {
+      const pass = document.getElementById('patientPassword').value;
+      const confirm = document.getElementById('patientConfirmPassword').value;
+      const error = document.getElementById('patientError');
+      if (pass !== confirm) {
+        e.preventDefault();
+        error.classList.remove('hidden');
+      } else {
+        error.classList.add('hidden');
+        alert("Patient registered successfully!");
+      }
+    });
+
+    // Check Password Match - Doctor
+    doctorForm.addEventListener('submit', (e) => {
+      const pass = document.getElementById('doctorPassword').value;
+      const confirm = document.getElementById('doctorConfirmPassword').value;
+      const error = document.getElementById('doctorError');
+      if (pass !== confirm) {
+        e.preventDefault();
+        error.classList.remove('hidden');
+      } else {
+        error.classList.add('hidden');
+        alert("Doctor registered successfully!");
+      }
+    });
+  </script>
+</body>
+</html>

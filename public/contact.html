@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HospitalCare</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./style/index.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body class="font-sans">
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-30 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+      <div class="text-xl font-bold">
+        <span class="text-gray-900">HospitalCare</span>
+      </div>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-6 text-gray-900 font-medium">
+        <a href="./index.html" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Home</a>
+        <a href="#about" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">About us</a>
+
+
+        <div class="relative group inline-block ps-4">
+          <button class="py-1">
+            Departments
+            </buutton>
+
+            <!-- Dropdown content -->
+            <div class="absolute hidden group-hover:block bg-white text-black mt-2 min-w-max shadow-md">
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Plastic Surgery</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Hamatology</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Neurology</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Gastrologic</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Orthopedic</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Pharmacology</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Dermatology</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Cardiology</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-200">Pulmonology</a>
+            </div>
+        </div>
+
+        <a href="#doctor" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Doctors</a>
+        <a href="appointment.html"
+          class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Appointment</a>
+        <a href="./contact.html" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Contact</a>
+        <a href="" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Patient & Victors</a>
+        <a href="#" class="ml-4 bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-300 hover:text-blue-800">Sign
+          In</a>
+        <a href="#"
+          class="ml-4 bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-300 hover:text-blue-800">Login</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button id="menuBtn" class="md:hidden text-gray-800">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 bg-white text-gray-700">
+      <a href="#home" class="block py-2">Home</a>
+      <a href="#about" class="block py-2">About</a>
+      <a href="#departments" class="block py-2">Departments</a>
+      <a href="#doctors" class="block py-2">Doctors</a>
+      <a href="#appointment" class="block py-2">Appointment</a>
+      <a href="#contact" class="block py-2">Contact</a>
+      <a href="" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Patient & Victors</a>
+      <a href="#" class="block mt-2 bg-wine text-white px-4 py-2 rounded text-center hover:bg-blue-800 transition">Sign
+        Up</a>
+      <a href="#" class="block mt-2 bg-wine text-white px-4 py-2 rounded text-center hover:bg-blue-800 transition">Sign
+        In</a>
+    </div>
+  </header>
+
+
+  <section id="home" class="relative bg-cover p-16"
+    style="background-image: url('./image/local/blog-02-770x500.jpg'); height: 80vh;">
+    <div class="absolute inset-0 bg-opacity-70"></div>
+    <div class="relative z-10 flex flex-col justify-center items-start h-full max-w-5xl mx-auto text-gray-950 pt-20">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-blue-800">Contact Us</h2>
+      <p class="text-lg md:text-xl mb-4 max-w-xl">We offer advanced and compassionate medical care for every patient.
+        Trusted by thousands of families.</p>
+      <div class="flex space-x-8 text-white pt-4">
+        <a href="#" class="w-10 h-10 bg-gray-950 rounded-full flex items-center justify-center hover:bg-primary">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="w-10 h-10 bg-gray-950 rounded-full flex items-center justify-center hover:bg-blue-400">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="w-10 h-10 bg-gray-950 rounded-full flex items-center justify-center hover:bg-red-800">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="w-10 h-10 bg-gray-950 rounded-full flex items-center justify-center hover:bg-red-600">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-center text-blue-950 py-12">
+    <p class="text-sky-400 text-2xl font-semibold">Get in touch</p>
+    <h2 class="text-5xl font-bold p-2 ">Call now or write a message</h2>
+    <p>Quis ipsum suspendisse ultrices gravida risus commodo viverra maecenas <br>
+      accumsan lacus vel facilisis.</p>
+
+    </div>
+    <!-- </section>
+
+    <section class="absolute bg-white shadow-lg max-w-5xl p-10 z-30 mt-1 left-36 mx-auto rounded-xl">
+      <div class="flex gap-10 transform-translate-y-1/2 transform-translate-x-1/2 w-full">
+  <div>
+    <p class="text-5xl text-center text-white"> <i class="fas fa-map-marker-alt text-sky-200 mt-1 mr-3"></i> </p>
+    <h3>Our Location​​</h3>
+    <p>i don't khow the laocation and don't really have anything in mind now</p>
+  </div>
+  <div>
+      <i class="bx bxs-phone"></i>
+    <h2>Phone Number</h2>
+    <p>Emergency Cases</p>
+    <p>++ 1235467890</p>
+  </div>
+  <div>
+      <i class="bx bxl-gmail"></i>
+    <h3>Email Address</h3>
+    <p>contact@example.com,</p>
+    <p>admin@example.com</p>
+  </div>
+</section>
+
+<section> -->
+
+  </section>
+
+  <section class="bg-gray-200 text-gray-950">
+    <div class="py-12 px-24">
+      <div>
+        <p class="text-sky-400 text-xl font-semibold">Get in touch</p>
+        <h2 class="text-3xl font-bold py-2 ">Get in touch by writing a message</h2>
+        <p>Quis ipsum suspendisse ultrices gravida risus commodo viverra maecenas.</p>
+
+                      <form action="/submit" method="POST" class="w-full md:w-2/3 pe-24 pt-6">
+
+                <div class="flex justify-between gap-10">
+                    <!-- Name -->
+                    <div class="mb-2 w-1/2">
+                        <input type="text" id="name" name="firstName" placeholder="First Name" required
+                            class="mt-1 block w-full px-4 py-2 border focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-2 w-1/2">
+                        <input type="email" id="lastName" name="name" placeholder="Last Name" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                </div>
+
+                <div class="flex justify-between gap-10 pt-4">
+                    <div class="mb-2 w-1/2">
+                        <input type="tel" id="phone" name="phone" placeholder="+123456789" required
+                            class="mt-1 block w-full px-4 py-2 border focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div class="mb-2 w-1/2">
+                        <input type="email" id="email" name="email" placeholder="your@example.com" required
+                            class="mt-1 block w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                </div>
+                
+                 <!-- Message -->
+                <div class="mb-4 pt-4 ">
+                    <textarea id="message" name="message" rows="4" placeholder="Type your message here..."
+                        class="mt-1 block w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-2">
+                    <button type="submit"
+                        class="px-6 w-1/2 py-3 text-white bg-blue-500 hover:bg-gray-900 transition">
+                        Send Message
+                    </button>
+                </div>
+
+
+              </div>
+      <div></div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-950 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <!-- Column 1 -->
+        <div>
+          <div class="items-center mb-6">
+            <h2 class="text-2xl font-bold text-sky-200">Hospitalcare</h2>
+          </div>
+          <p class="text-white mb-6">Providing exceptional healthcare services with compassion and advanced medical
+            technology since 1995.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-primary">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-400">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-purple-600">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-red-600">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <h3 class="text-xl font-bold mb-6 pb-2 border-b border-gray-700 text-sky-200">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Home</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> About Us</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Services</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Doctors</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Departments</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div>
+          <h3 class="text-xl font-bold mb-6 pb-2 border-b border-gray-700 text-sky-200">Departments</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Cardiology</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Neurology</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Orthopedics</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Pediatrics</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Radiology</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Surgery</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div>
+          <h3 class="text-xl font-bold mb-6 pb-2 border-b border-gray-700 text-sky-200">Contact Us</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-sky-200 mt-1 mr-3"></i>
+              <span class="text-white">123 Medicwhite, Health City, HC 12345</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone-alt text-sky-200 mr-3"></i>
+              <span class="text-white">+1 (123) 456-7890</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope text-sky-200 mr-3"></i>
+              <span class="text-white">info@medilifehospital.com</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-clock text-sky-200 mr-3"></i>
+              <span class="text-white">24/7 Emergency Services</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-4 text-center">
+        <p class="text-white">Hospital. All rights reserved. Designed with <i class="fas fa-heart text-sky-500"></i> for
+          better healthcare.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- <script src="./script/index.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+
+</html>
