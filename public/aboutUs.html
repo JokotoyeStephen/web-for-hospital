@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - LifeCare Hospital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+  <header class="fixed top-0 left-0 w-full z-30 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+            <div class="text-xl font-bold">
+                <span class="text-gray-900">HospitalCare</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-6 text-gray-900 font-medium">
+                <a href="./index.html" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Home</a>
+
+                <a href="#about" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">About us</a>
+
+                <div class="relative group inline-block ps-4">
+                    <button class="py-1">
+                        Departments
+                        </buutton>
+
+                        <!-- Dropdown content -->
+                        <div class="absolute hidden group-hover:block bg-white text-black mt-2 min-w-max shadow-md">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Plastic Surgery</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Hamatology</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Neurology</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Gastrologic</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Orthopedic</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Pharmacology</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Dermatology</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Cardiology</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-200">Pulmonology</a>
+                        </div>
+                </div>
+
+                <a href="#doctor" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Doctors</a>
+                <a href="appointment.html"
+                    class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Appointment</a>
+                <a href="./contact.html" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Contact
+                    Us</a>
+                <a href="" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Patient & Victors</a>
+                <a href="#"
+                    class="ml-4 bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-300 hover:text-blue-800">Sign
+                    In</a>
+                    <a href="#"
+                    class="ml-4 bg-gray-900 text-white px-4 py-2 rounded hover:bg-gray-300 hover:text-blue-800">Sign
+                    Up</a>
+            </nav>
+
+            <!-- Mobile Toggle -->
+            <button id="menuBtn" class="md:hidden text-gray-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 bg-white text-gray-700">
+            <a href="#home" class="block py-2">Home</a>
+            <a href="#about" class="block py-2">About</a>
+            <a href="#departments" class="block py-2">Departments</a>
+            <a href="#doctors" class="block py-2">Doctors</a>
+            <a href="./appointment.html" class="block py-2">Appointment</a>
+            <a href="contact.html" class="block py-2">Contact</a>
+            <a href="" class="nav-link py-1 border-b-2 border-transparent hover:text-blue-800">Patient & Victors</a>
+
+            <a href="#"
+                class="block mt-2 bg-wine text-white px-4 py-2 rounded text-center hover:bg-blue-800 transition">Sign
+                In</a>
+        </div>
+    </header>
+
+
+  <!-- Hero Section -->
+
+ <section class="relative bg-cover p-16"
+        style="background-image: url('./image/female-surgeon-with-surgical-mask-operating-room-using-3d-image-guided-surgery-machine.jpg'); height: 50vh;">
+        <div class="absolute inset-0 bg-opacity-40"></div>
+        <div
+            class="relative z-10 flex flex-col justify-center items-start h-full max-w-5xl mx-auto text-gray-950 pt-20">
+           <div class="container mx-auto text-center px-6">
+      <h2 class="text-4xl font-bold mb-4">About LifeCare Hospital</h2>
+      <p class="max-w-2xl mx-auto text-lg">
+        Committed to providing world-class healthcare services with compassion, innovation, and excellence.
+      </p>
+    </div>
+
+            <div class="flex space-x-8 text-white pt-4 text-center">
+                <a href="#"
+                    class="w-10 h-10 bg-gray-950 rounded-full flex items-center justify-center hover:bg-primary">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 bg-gray-950 rounded-full flex items-center justify-center hover:bg-blue-400">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 bg-gray-950 rounded-full flex items-center justify-center hover:bg-red-800">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#"
+                    class="w-10 h-10 bg-gray-950 rounded-full flex items-center justify-center hover:bg-red-600">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+  <!-- About Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-10">
+      <img src="./image/doctor-operating-room-putting-drugs.jpg" alt="Hospital Building" class="rounded-2xl shadow-lg w-full md:w-1/2">
+      <div class="md:w-1/2">
+        <h3 class="text-3xl font-bold text-gray-950 mb-4">Who We Are</h3>
+        <p class="text-gray-900 leading-relaxed mb-4">
+          LifeCare Hospital is a state-of-the-art healthcare facility dedicated to improving the lives of our patients
+          through modern medical technology, professional expertise, and a compassionate team. Since our founding,
+          we’ve been at the forefront of quality and affordable healthcare for our community.
+        </p>
+        <p class="text-gray-900 leading-relaxed">
+          Our services span across all major medical specialties, ensuring comprehensive healthcare that meets
+          the highest international standards.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission, Vision, and Values -->
+  <section class="bg-gray-200 py-16">
+    <div class="container mx-auto px-6 md:px-12 text-center">
+      <h3 class="text-3xl font-bold text-[#001f3f] mb-12">Our Guiding Principles</h3>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-white shadow-md rounded-xl p-8 hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold text-sky-600 mb-3">Our Mission</h4>
+          <p class="text-gray-600">
+            To deliver high-quality, patient-centered healthcare services with compassion, innovation,
+            and a commitment to continuous improvement.
+          </p>
+        </div>
+        <div class="bg-white shadow-md rounded-xl p-8 hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold text-sky-600 mb-3">Our Vision</h4>
+          <p class="text-gray-600">
+            To be the most trusted and preferred healthcare provider in the region,
+            recognized for our excellence, ethics, and innovation in medical care.
+          </p>
+        </div>
+        <div class="bg-white shadow-md rounded-xl p-8 hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold text-sky-600 mb-3">Our Core Values</h4>
+          <ul class="text-gray-600 text-left list-disc list-inside space-y-2">
+            <li>Compassion & Care</li>
+            <li>Integrity & Ethics</li>
+            <li>Innovation & Excellence</li>
+            <li>Teamwork & Respect</li>
+            <li>Accountability & Trust</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 md:px-12 text-center">
+      <h3 class="text-3xl font-bold text-[#001f3f] mb-12">Meet Our Dedicated Team</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-sky-50 rounded-xl shadow-md p-6 hover:shadow-lg transition">
+          <img src="https://cdn.pixabay.com/photo/2016/03/27/18/10/doctor-1286715_1280.jpg" alt="Doctor 1" class="w-32 h-32 mx-auto rounded-full mb-4">
+          <h4 class="text-xl font-semibold text-sky-700">Dr. John Adams</h4>
+          <p class="text-gray-500 text-sm">Chief Medical Officer</p>
+        </div>
+        <div class="bg-sky-50 rounded-xl shadow-md p-6 hover:shadow-lg transition">
+          <img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/doctor-1869421_1280.jpg" alt="Doctor 2" class="w-32 h-32 mx-auto rounded-full mb-4">
+          <h4 class="text-xl font-semibold text-sky-700">Dr. Emily Stone</h4>
+          <p class="text-gray-500 text-sm">Head of Surgery</p>
+        </div>
+        <div class="bg-sky-50 rounded-xl shadow-md p-6 hover:shadow-lg transition">
+          <img src="https://cdn.pixabay.com/photo/2017/09/21/18/18/people-2772007_1280.jpg" alt="Doctor 3" class="w-32 h-32 mx-auto rounded-full mb-4">
+          <h4 class="text-xl font-semibold text-sky-700">Dr. James Liu</h4>
+          <p class="text-gray-500 text-sm">Consultant Physician</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+  <!-- Footer -->
+  <footer class="bg-gray-950 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <!-- Column 1 -->
+        <div>
+          <div class="items-center mb-6">
+            <h2 class="text-2xl font-bold text-sky-200">Hospitalcare</h2>
+          </div>
+          <p class="text-white mb-6">Providing exceptional healthcare services with compassion and advanced medical
+            technology since 1995.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-primary">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-blue-400">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-purple-600">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center hover:bg-red-600">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <h3 class="text-xl font-bold mb-6 pb-2 border-b border-gray-700 text-sky-200">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Home</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> About Us</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Services</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Doctors</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Departments</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div>
+          <h3 class="text-xl font-bold mb-6 pb-2 border-b border-gray-700 text-sky-200">Departments</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Cardiology</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Neurology</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Orthopedics</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Pediatrics</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Radiology</a></li>
+            <li><a href="#" class="text-white flex items-center"><i
+                  class="fas fa-chevron-right text-xs mr-2 text-secondary"></i> Surgery</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div>
+          <h3 class="text-xl font-bold mb-6 pb-2 border-b border-gray-700 text-sky-200">Contact Us</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-sky-200 mt-1 mr-3"></i>
+              <span class="text-white">123 Medicwhite, Health City, HC 12345</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone-alt text-sky-200 mr-3"></i>
+              <span class="text-white">+1 (123) 456-7890</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope text-sky-200 mr-3"></i>
+              <span class="text-white">info@medilifehospital.com</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-clock text-sky-200 mr-3"></i>
+              <span class="text-white">24/7 Emergency Services</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-4 text-center">
+        <p class="text-white">Hospital. All rights reserved. Designed with <i class="fas fa-heart text-sky-500"></i> for
+          better healthcare.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="./script/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+
+</html> <p class="text-white">Hospital. All rights reserved. Designed with <i class="fas fa-heart text-sky-500"></i> for
+          better healthcare.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

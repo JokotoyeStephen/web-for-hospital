@@ -18,5 +18,10 @@
     "url": "https://github.com/JokotoyeStephen/web-for-hospital/issues"
   },
   "homepage": "https://github.com/JokotoyeStephen/web-for-hospital#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.10"
+  }
 }
